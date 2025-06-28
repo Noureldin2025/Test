@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoorNation 2025: Detailed Go-to-Market Strategy</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Poppins:wght@300;400;600;700&display=swap');
+
+        :root {
+            --primary-color: #003366; /* Deep Blue */
+            --secondary-color: #00A86B; /* Jade Green */
+            --accent-color: #FFA500; /* Orange */
+            --background-color: #f4f7f6;
+            --text-color: #333;
+            --light-gray: #e0e0e0;
+            --white: #ffffff;
+            --card-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            --font-primary: 'Poppins', sans-serif;
+            --font-secondary: 'Cairo', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            line-height: 1.7;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            transition: all 0.3s;
+        }
+        
+        body.rtl {
+            direction: rtl;
+            font-family: var(--font-secondary);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), #00509e);
+            color: var(--white);
+            padding: 4rem 0;
+            text-align: center;
+            border-bottom: 5px solid var(--accent-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+            animation: move-dots 20s linear infinite;
+        }
+
+        @keyframes move-dots {
+            from { transform: translate(0, 0); }
+            to { transform: translate(-100px, 100px); }
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+            font-family: var(--font-secondary);
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        header p {
+            font-size: 1.3rem;
+            font-weight: 300;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+            padding: 0.5rem 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            color: var(--primary-color);
+            padding: 0.85rem 1rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: block;
+            border-bottom: 3px solid transparent;
+            font-size: 0.9rem;
+        }
+        
+        body.ltr nav ul li a { font-family: var(--font-primary); }
+        body.rtl nav ul li a { font-family: var(--font-secondary); }
+
+        nav ul li a:hover, nav ul li a.active {
+            color: var(--secondary-color);
+            border-bottom-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+        
+        .language-switcher {
+            display: flex;
+            gap: 5px;
+            background-color: var(--light-gray);
+            border-radius: 20px;
+            padding: 5px;
+            margin-left: 20px;
+        }
+        body.rtl .language-switcher {
+            margin-left: 0;
+            margin-right: 20px;
+        }
+        
+        .language-switcher button {
+            border: none;
+            background-color: transparent;
+            color: var(--primary-color);
+            font-weight: 600;
+            padding: 5px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .language-switcher button.active {
+            background-color: var(--white);
+            color: var(--secondary-color);
+            box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+        }
+
+        section {
+            padding: 100px 20px;
+            border-bottom: 1px solid var(--light-gray);
+            overflow: hidden; /* To contain animations */
+        }
+        
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        h2 {
+            font-size: 2.8rem;
+            color: var(--primary-color);
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 20px;
+            font-weight: 700;
+        }
+        body.ltr h2 { font-family: var(--font-primary); }
+        body.rtl h2 { font-family: var(--font-secondary); }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 5px;
+            background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+            border-radius: 5px;
+        }
+        
+        h3 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-top: 2rem;
+            margin-bottom: 1.5rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+        }
+        body.rtl h3 {
+            border-left: none;
+            border-right: 5px solid var(--accent-color);
+            padding-left: 0;
+            padding-right: 15px;
+        }
+
+        h4.detail-heading {
+             font-size: 1.2rem;
+             color: var(--secondary-color);
+             margin-top: 1.5rem;
+             margin-bottom: 0.5rem;
+             font-weight: 700;
+        }
+
+        body.ltr h3, body.ltr h4.detail-heading { font-family: var(--font-primary); }
+        body.rtl h3, body.rtl h4.detail-heading { font-family: var(--font-secondary); }
+
+        p, li {
+            font-size: 1.1rem;
+            margin-bottom: 1.2rem;
+        }
+        
+        ul {
+            list-style-position: inside;
+        }
+        body.ltr ul { padding-left: 1rem; }
+        body.rtl ul { padding-right: 1rem; }
+
+
+        .card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: var(--card-shadow);
+            margin-bottom: 2rem;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            border: 1px solid transparent;
+            transform-style: preserve-3d;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+        }
+
+        /* Infographic Overview */
+        .infographic-overview {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        .info-card {
+            background: linear-gradient(145deg, #e6eef2, #ffffff);
+            padding: 2rem 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 51, 102, 0.08);
+            border-top: 4px solid var(--secondary-color);
+            transition: all 0.3s ease-in-out;
+        }
+        .info-card:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 12px 30px rgba(0, 168, 107, 0.15);
+        }
+        .info-card i {
+            font-size: 3.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            display: block;
+        }
+        .info-card h4 {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        .info-card p {
+            font-size: 1rem;
+            color: var(--text-color);
+            line-height: 1.5;
+        }
+
+
+        /* SWOT Tabs styles */
+        .swot-container .tabs-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+            border-radius: 50px;
+            background: var(--white);
+            box-shadow: var(--card-shadow);
+            padding: 0.5rem;
+            flex-wrap: wrap;
+        }
+        .swot-container .tab {
+            padding: 0.8rem 1.5rem;
+            cursor: pointer;
+            font-weight: 600;
+            border: none;
+            background: transparent;
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            border-radius: 50px;
+            transition: all 0.4s ease;
+        }
+        body.ltr .swot-container .tab { font-family: var(--font-primary); }
+        body.rtl .swot-container .tab { font-family: var(--font-secondary); }
+
+        .swot-container .tab i {
+            margin-right: 8px;
+        }
+        body.rtl .swot-container .tab i {
+            margin-right: 0;
+            margin-left: 8px;
+        }
+        .swot-container .tab.active {
+            color: var(--white);
+            background: var(--secondary-color);
+            transform: scale(1.05);
+        }
+        .swot-container .tab-content {
+            display: none;
+            padding: 1rem 0 0 0;
+        }
+        .swot-container .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+        
+        /* Persona Section */
+        .personas-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+        .persona-card {
+            perspective: 1000px;
+            cursor: pointer;
+        }
+        .persona-card-inner {
+            position: relative;
+            width: 100%;
+            min-height: 400px; 
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+            border-radius: 15px;
+            box-shadow: var(--card-shadow);
+        }
+        .persona-card:hover .persona-card-inner {
+            transform: rotateY(180deg);
+        }
+        .persona-card-front, .persona-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+            align-items: center;
+            padding: 2rem;
+            border-radius: 15px;
+        }
+        .persona-card-front-content, .persona-card-back-content {
+            width: 100%;
+            text-align: center;
+        }
+
+        .persona-card-front {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+        }
+        .persona-card-front i {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+        .persona-card-front h4 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .persona-card-back {
+            background-color: var(--white);
+            color: var(--text-color);
+            transform: rotateY(180deg);
+            align-items: flex-start;
+            justify-content: center;
+        }
+        body.rtl .persona-card-back {
+            align-items: flex-end;
+        }
+        .persona-card-back-content {
+             text-align: left;
+        }
+        body.rtl .persona-card-back-content {
+            text-align: right;
+        }
+        .persona-card-back h5 {
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        .persona-card-back ul {
+            padding: 0;
+            list-style: none;
+            width: 100%;
+        }
+        .persona-card-back ul li {
+            font-size: 0.95rem;
+            padding-left: 1.2rem;
+            position: relative;
+            margin-bottom: 0.5rem;
+        }
+        body.rtl .persona-card-back ul li {
+            padding-left: 0;
+            padding-right: 1.2rem;
+        }
+        .persona-card-back ul li::before {
+            content: '\f105'; /* fa-chevron-right */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+        }
+        body.rtl .persona-card-back ul li::before {
+            content: '\f104'; /* fa-chevron-left */
+            left: auto;
+            right: 0;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .kpi-section { background-color: var(--primary-color); color: var(--white); }
+        .kpi-section h2, .kpi-section h3 { color: var(--white); }
+        .kpi-dashboard { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; text-align: center; }
+        .kpi-card { background: rgba(255, 255, 255, 0.1); padding: 2rem; border-radius: 10px; border: 1px solid rgba(255, 255, 255, 0.2); transition: all 0.3s ease; }
+        .kpi-card:hover { background: rgba(255, 255, 255, 0.2); transform: scale(1.05); }
+        .kpi-card h4 { font-size: 1.2rem; color: var(--light-gray); margin-bottom: 1rem; font-weight: 400; min-height: 40px;}
+        .kpi-value { font-size: 3rem; font-weight: 700; color: var(--accent-color); }
+        .kpi-target { font-size: 1rem; color: var(--light-gray); opacity: 0.8; }
+        
+        #kpiChartContainer { max-width: 800px; margin: 2rem auto 0 auto; background: var(--white); padding: 1.5rem; border-radius: 15px; }
+        
+        .accordion { max-width: 900px; margin: 0 auto; }
+        .accordion-item { margin-bottom: 1rem; border: 1px solid var(--light-gray); border-radius: 10px; overflow: hidden; background: var(--white); box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .accordion-header { background-color: var(--white); color: var(--primary-color); padding: 1.25rem 1.5rem; cursor: pointer; font-weight: 600; font-size: 1.2rem; display: flex; justify-content: space-between; align-items: center; transition: background-color 0.3s; }
+        .accordion-header:hover { background-color: #f0f8ff; }
+        .accordion-header .icon { transition: transform 0.4s ease; font-size: 1.2rem; }
+        .accordion-header i.icon-header { margin-right: 10px; color: var(--secondary-color); width: 24px; text-align: center;}
+        body.rtl .accordion-header i.icon-header { margin-right: 0; margin-left: 10px; }
+        .accordion-item.active .accordion-header .icon { transform: rotate(180deg); }
+        .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.5s cubic-bezier(0, 1, 0, 1), padding 0.5s ease-out; padding: 0 1.5rem; }
+        .accordion-content .content-inner { 
+            padding: 1.5rem 0; 
+            border-top: 1px solid var(--light-gray); 
+            color: var(--text-color);
+        }
+        
+        .roi-calculator { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-top: 2rem;}
+        .roi-calculator .form-group { margin-bottom: 1rem; }
+        .roi-calculator label { display: block; margin-bottom: 0.5rem; font-weight: 600; }
+        .roi-calculator input, .roi-calculator select { width: 100%; padding: 0.75rem; border-radius: 8px; border: 1px solid var(--light-gray); font-size: 1rem;}
+        .roi-calculator button { background-color: var(--secondary-color); color: var(--white); border: none; padding: 1rem 2rem; border-radius: 8px; cursor: pointer; font-size: 1.1rem; font-weight: 600; transition: background-color 0.3s; width: 100%; margin-top: 1rem;}
+        .roi-calculator button:hover { background-color: #008a59; }
+        .roi-results h4 { color: var(--primary-color); margin-bottom: 1rem; }
+        .roi-results p { font-size: 1.2rem; margin-bottom: 0.8rem; }
+        .roi-results .highlight { font-weight: 700; color: var(--secondary-color); font-size: 1.5rem; }
+        
+        table { width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.95rem; }
+        th, td { border: 1px solid var(--light-gray); padding: 0.8rem 1rem; text-align: left; vertical-align: middle;}
+        body.rtl th, body.rtl td { text-align: right; }
+        th { background-color: var(--primary-color); color: var(--white); font-weight: 600;}
+        tr:nth-child(even) { background-color: #f9f9f9; }
+        .table-container { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        
+        @media screen and (max-width: 992px) {
+            nav ul { justify-content: flex-start; overflow-x: auto; padding: 0 1rem;}
+            nav ul li a { padding: 0.8rem; font-size: 0.85rem;}
+            .nav-container { justify-content: space-between; padding: 0 1rem; }
+            .language-switcher { margin: 0; }
+        }
+
+        @media screen and (max-width: 768px) {
+            h2 { font-size: 2.2rem; }
+            h3 { font-size: 1.5rem; }
+            .roi-calculator { grid-template-columns: 1fr; } 
+            header h1 { font-size: 2.5rem; }
+            header p { font-size: 1.1rem; }
+            section { padding: 60px 20px; }
+        }
+    </style>
+</head>
+<body class="ltr">
+
+    <header>
+        <div class="container">
+            <h1 data-translate="header.title">NoorNation 2025</h1>
+            <p data-translate="header.subtitle">The Integrated Go-to-Market Strategy: A Roadmap for Regional Leadership and Sustainable Growth</p>
+        </div>
+    </header>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <ul>
+                <li><a href="#section1" data-translate="nav.section1">Dashboard</a></li>
+                <li><a href="#section2" data-translate="nav.section2">Strategic Analysis</a></li>
+                <li><a href="#section3" data-translate="nav.section3">Objectives</a></li>
+                <li><a href="#section4" data-translate="nav.section4">Sales & Financing</a></li>
+                <li><a href="#section5" data-translate="nav.section5">Marketing Engine</a></li>
+                <li><a href="#section6" data-translate="nav.section6">Field Strategy</a></li>
+                <li><a href="#section7" data-translate="nav.section7">Performance & KPIs</a></li>
+            </ul>
+            <div class="language-switcher">
+                <button id="lang-en" class="active">EN</button>
+                <button id="lang-ar">AR</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="section1">
+            <div class="container">
+                <h2 data-translate="section1.title">Section 1: Executive Dashboard</h2>
+                
+                <div class="infographic-overview">
+                    <div class="info-card">
+                        <i class="fas fa-users"></i>
+                        <h4 data-translate="section1.infographic.card1.title">Empower 1M+ People</h4>
+                        <p data-translate="section1.infographic.card1.text">Provide sustainable access to clean water and energy, driving community resilience and food security.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <h4 data-translate="section1.infographic.card2.title">Lead the MENA Region</h4>
+                        <p data-translate="section1.infographic.card2.text">Become the go-to expert for integrated solar solutions, starting with strategic entry into Egypt and the UAE.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h4 data-translate="section1.infographic.card3.title">Drive High-Value Growth</h4>
+                        <p data-translate="section1.infographic.card3.text">Target 20 high-value sales contracts by leveraging our superior technology and financing models.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 data-translate="section1.visionMission.title">1.1. 2025 Vision & Mission</h3>
+                    <p><strong data-translate="section1.visionMission.vision.label">Vision:</strong> <span data-translate="section1.visionMission.vision.text">To be the indisputable leader and go-to expert for integrated, solar-powered water and energy solutions in the MENA region, starting with Egypt and the UAE.</span></p>
+                    <p><strong data-translate="section1.visionMission.mission.label">Mission:</strong> <span data-translate="section1.visionMission.mission.text">To empower one million beneficiaries by providing sustainable, reliable, and cost-effective access to clean water and energy, thereby driving agricultural productivity, food security, and community resilience.</span></p>
+                </div>
+                <div class="card">
+                    <h3 data-translate="section1.glance.title">1.2. Core Strategic Objectives (At a Glance)</h3>
+                     <div class="kpi-dashboard">
+                        <div class="kpi-card">
+                            <h4 data-translate="section1.kpi.impressions">Brand Dominance</h4>
+                            <div class="kpi-value" data-target="3250000">0</div>
+                            <div class="kpi-target" data-translate="section1.kpi.impressions_target">Brand Impressions</div>
+                        </div>
+                        <div class="kpi-card">
+                            <h4 data-translate="section1.kpi.leads">Lead & Sales Engine</h4>
+                            <div class="kpi-value" data-target="3000">0</div>
+                            <div class="kpi-target" data-translate="section1.kpi.leads_target">Qualified Leads</div>
+                        </div>
+                        <div class="kpi-card">
+                            <h4 data-translate="section1.kpi.sales">UAE Market Penetration</h4>
+                            <div class="kpi-value" data-target="2">0</div>
+                            <div class="kpi-target" data-translate="section1.kpi.sales_target">Key UAE Contracts</div>
+                        </div>
+                        <div class="kpi-card">
+                            <h4 data-translate="section1.kpi.engagement">Community & Engagement</h4>
+                            <div class="kpi-value" data-target="20">0</div>%
+                            <div class="kpi-target" data-translate="section1.kpi.engagement_target">Engagement Rate</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section2" style="background-color: var(--white);">
+            <div class="container">
+                <h2 data-translate="section2.title">Section 2: Strategic Analysis</h2>
+                <div class="card swot-container">
+                    <h3 data-translate="section2.swot.title">2.1. Enhanced SWOT Analysis</h3>
+                     <div class="tabs-container">
+                        <button class="tab active" onclick="openSwotTab(event, 'Strengths')"><i class="fas fa-rocket"></i> <span data-translate="section2.swot.tabs.strengths">Strengths</span></button>
+                        <button class="tab" onclick="openSwotTab(event, 'Weaknesses')"><i class="fas fa-wrench"></i> <span data-translate="section2.swot.tabs.weaknesses">Weaknesses</span></button>
+                        <button class="tab" onclick="openSwotTab(event, 'Opportunities')"><i class="fas fa-lightbulb"></i> <span data-translate="section2.swot.tabs.opportunities">Opportunities</span></button>
+                        <button class="tab" onclick="openSwotTab(event, 'Threats')"><i class="fas fa-shield-alt"></i> <span data-translate="section2.swot.tabs.threats">Threats</span></button>
+                    </div>
+
+                    <div id="Strengths" class="tab-content active">
+                        <div data-translate="section2.swot.strengths_detail"></div>
+                    </div>
+                    <div id="Weaknesses" class="tab-content">
+                        <div data-translate="section2.swot.weaknesses_detail"></div>
+                    </div>
+                    <div id="Opportunities" class="tab-content">
+                        <div data-translate="section2.swot.opportunities_detail"></div>
+                    </div>
+                     <div id="Threats" class="tab-content">
+                        <div data-translate="section2.swot.threats_detail"></div>
+                    </div>
+                </div>
+                <div class="card">
+                     <h3 data-translate="section2.personas.title">2.3. Target Audience Personas</h3>
+                     <p data-translate="section2.personas.subtitle">Understanding our customers is key. Click on each card to reveal the motivations, pains, and gains of our core audience segments.</p>
+                     <div class="personas-container">
+                        <div class="persona-card" onclick="this.querySelector('.persona-card-inner').style.transform = this.querySelector('.persona-card-inner').style.transform === 'rotateY(180deg)' ? '' : 'rotateY(180deg)'">
+                            <div class="persona-card-inner">
+                                <div class="persona-card-front">
+                                    <div class="persona-card-front-content">
+                                        <i class="fas fa-leaf"></i>
+                                        <h4 data-translate="section2.personas.ahmed.name">"Ahmed"</h4>
+                                        <p data-translate="section2.personas.ahmed.desc">The Small-Scale Egyptian Farmer</p>
+                                    </div>
+                                </div>
+                                <div class="persona-card-back">
+                                    <div class="persona-card-back-content">
+                                        <h5 data-translate="section2.personas.pains">Pains</h5>
+                                        <ul><li data-translate="section2.personas.ahmed.pain1">Unreliable water supply</li><li data-translate="section2.personas.ahmed.pain2">Volatile fuel prices</li><li data-translate="section2.personas.ahmed.pain3">Low crop yields</li></ul>
+                                        <h5 data-translate="section2.personas.gains">Gains</h5>
+                                        <ul><li data-translate="section2.personas.ahmed.gain1">Water security</li><li data-translate="section2.personas.ahmed.gain2">Predictable costs</li><li data-translate="section2.personas.ahmed.gain3">Higher profitability</li></ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="persona-card" onclick="this.querySelector('.persona-card-inner').style.transform = this.querySelector('.persona-card-inner').style.transform === 'rotateY(180deg)' ? '' : 'rotateY(180deg)'">
+                            <div class="persona-card-inner">
+                                <div class="persona-card-front">
+                                    <div class="persona-card-front-content">
+                                        <i class="fas fa-building"></i>
+                                        <h4 data-translate="section2.personas.fatima.name">"Fatima"</h4>
+                                        <p data-translate="section2.personas.fatima.desc">The UAE Agri-Business Manager</p>
+                                    </div>
+                                </div>
+                                <div class="persona-card-back">
+                                     <div class="persona-card-back-content">
+                                        <h5 data-translate="section2.personas.pains">Pains</h5>
+                                        <ul><li data-translate="section2.personas.fatima.pain1">Meeting national food security targets</li><li data-translate="section2.personas.fatima.pain2">Extreme water scarcity</li><li data-translate="section2.personas.fatima.pain3">High energy costs</li></ul>
+                                        <h5 data-translate="section2.personas.gains">Gains</h5>
+                                        <ul><li data-translate="section2.personas.fatima.gain1">Alignment with UAE Vision 2051</li><li data-translate="section2.personas.fatima.gain2">Achieving sustainability KPIs</li><li data-translate="section2.personas.fatima.gain3">Long-term production security</li></ul>
+                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="persona-card" onclick="this.querySelector('.persona-card-inner').style.transform = this.querySelector('.persona-card-inner').style.transform === 'rotateY(180deg)' ? '' : 'rotateY(180deg)'">
+                             <div class="persona-card-inner">
+                                <div class="persona-card-front">
+                                    <div class="persona-card-front-content">
+                                        <i class="fas fa-globe-africa"></i>
+                                        <h4 data-translate="section2.personas.david.name">"David"</h4>
+                                        <p data-translate="section2.personas.david.desc">The NGO/Gov Project Manager</p>
+                                    </div>
+                                </div>
+                                <div class="persona-card-back">
+                                     <div class="persona-card-back-content">
+                                        <h5 data-translate="section2.personas.pains">Pains</h5>
+                                        <ul><li data-translate="section2.personas.david.pain1">Deploying solutions in remote areas</li><li data-translate="section2.personas.david.pain2">Ensuring project sustainability</li><li data-translate="section2.personas.david.pain3">Reporting quantifiable impact</li></ul>
+                                        <h5 data-translate="section2.personas.gains">Gains</h5>
+                                        <ul><li data-translate="section2.personas.david.gain1">'Plug & Play' easy deployment</li><li data-translate="section2.personas.david.gain2">Clear ESG impact metrics</li><li data-translate="section2.personas.david.gain3">Alignment with SDGs</li></ul>
+                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="section3">
+            <div class="container">
+                <h2 data-translate="section3.title">Section 3: Core Strategic Pillars & Revised Objectives</h2>
+                <div class="card">
+                     <h3 data-translate="section3.smart.title">3.1. Revised SMART Objectives by Quarter (2025)</h3>
+                     <p data-translate="section3.smart.subtitle">This plan translates analysis into a clear, time-bound action plan, ensuring every initiative contributes directly to the overarching goals.</p>
+                     <div class="table-container">
+                         <table>
+                             <thead>
+                                 <tr>
+                                     <th data-translate="section3.smart.table.q">Quarter</th>
+                                     <th data-translate="section3.smart.table.obj">Strategic Objective</th>
+                                     <th data-translate="section3.smart.table.metric">Key Metric</th>
+                                     <th data-translate="section3.smart.table.target">Target</th>
+                                     <th data-translate="section3.smart.table.init">Key Initiatives</th>
+                                 </tr>
+                             </thead>
+                             <tbody>
+                                 <tr>
+                                     <td>Q1</td>
+                                     <td data-translate="section3.smart.q1.obj">Foundation & Awareness</td>
+                                     <td data-translate="section3.smart.q1.metric">Brand Impressions</td>
+                                     <td>750,000</td>
+                                     <td data-translate="section3.smart.q1.init">Launch "NoorNation Finance Advantage," UAE PR campaign, initiate SEO audit.</td>
+                                 </tr>
+                                 <tr>
+                                     <td>Q2</td>
+                                     <td data-translate="section3.smart.q2.obj">Engagement & Nurturing</td>
+                                     <td data-translate="section3.smart.q2.metric">Marketing Qualified Leads (MQLs)</td>
+                                     <td>500-700</td>
+                                     <td data-translate="section3.smart.q2.init">Host first webinar, launch new referral program, visit early-year expos.</td>
+                                 </tr>
+                                  <tr>
+                                     <td>Q3</td>
+                                     <td data-translate="section3.smart.q3.obj">Growth & UAE Contracts</td>
+                                     <td data-translate="section3.smart.q3.metric">Sales Closed (Egypt + UAE)</td>
+                                     <td>8</td>
+                                     <td data-translate="section3.smart.q3.init">Exhibit at Sahara Expo, secure 1 B2B & 1 B2C contract in UAE.</td>
+                                 </tr>
+                                  <tr>
+                                     <td>Q4</td>
+                                     <td data-translate="section3.smart.q4.obj">Consolidation & Expansion</td>
+                                     <td data-translate="section3.smart.q4.metric">Total Annual Sales</td>
+                                     <td>20</td>
+                                     <td data-translate="section3.smart.q4.init">Exhibit at AGRENA, major referral program push, publish year-end report.</td>
+                                 </tr>
+                             </tbody>
+                         </table>
+                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section4" style="background-color: var(--white);">
+            <div class="container">
+                <h2 data-translate="section4.title">Section 4: The Game-Changer: Sales & Financing</h2>
+                 <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header"><i class="fas fa-hand-holding-usd icon-header"></i> <span data-translate="section4.finance.title">The NoorNation Finance Advantage</span> <span class="icon fas fa-chevron-down"></span></div>
+                        <div class="accordion-content">
+                            <div class="content-inner">
+                                <p data-translate="section4.finance.text">We are transforming financing from a mere option into a competitive advantage. We are not just selling a product; we are selling an affordable path to ownership and profitability.</p>
+                                <div class="table-container">
+                                    <table>
+                                         <thead>
+                                             <tr>
+                                                 <th data-translate="section4.finance.table.name">Package Name</th>
+                                                 <th data-translate="section4.finance.table.customer">Target Customer</th>
+                                                 <th data-translate="section4.finance.table.features">Key Features</th>
+                                                 <th data-translate="section4.finance.table.partner">Proposed Partner</th>
+                                             </tr>
+                                         </thead>
+                                         <tbody>
+                                             <tr>
+                                                 <td data-translate="section4.finance.p1.name">UAE AgriTech Partnership Loan</td>
+                                                 <td data-translate="section4.finance.p1.customer">UAE Commercial Farms & Agribusinesses</td>
+                                                 <td data-translate="section4.finance.p1.features">Up to 10-year tenor, 2.5-year grace period, up to 90% project financing.</td>
+                                                 <td data-translate="section4.finance.p1.partner">Emirates Development Bank (EDB)</td>
+                                             </tr>
+                                             <tr>
+                                                 <td data-translate="section4.finance.p2.name">Egypt Lease-to-Own Program</td>
+                                                 <td data-translate="section4.finance.p2.customer">Small to Medium Egyptian Farmers</td>
+                                                 <td data-translate="section4.finance.p2.features">Converts large CAPEX into manageable monthly OPEX, with an option to own.</td>
+                                                 <td data-translate="section4.finance.p2.partner">Direct by NoorNation or via local partners.</td>
+                                             </tr>
+                                             <tr>
+                                                 <td data-translate="section4.finance.p3.name">NGO & B2G Project Finance</td>
+                                                 <td data-translate="section4.finance.p3.customer">NGOs, Government Bodies, Development Projects</td>
+                                                 <td data-translate="section4.finance.p3.features">Structured project financing, flexible terms to match donor funding cycles.</td>
+                                                 <td data-translate="section4.finance.p3.partner">International Development Banks, Sustainability Funds.</td>
+                                             </tr>
+                                         </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="accordion-item">
+                        <div class="accordion-header"><i class="fas fa-calculator icon-header"></i> <span data-translate="section4.value.title">Value-Based Selling & ROI Calculator</span> <span class="icon fas fa-chevron-down"></span></div>
+                        <div class="accordion-content">
+                            <div class="content-inner">
+                                <p data-translate="section4.value.text">The customer isn't buying a solar pump; they are buying immunity from fuel price shocks, lower operational costs, and long-term profitability. Our sales team is trained to focus on ROI and Total Cost of Ownership (TCO).</p>
+                                <h3 data-translate="section4.value.subtitle2">Interactive ROI Calculator</h3>
+                                <p data-translate="section4.value.text2">Discover your potential savings with our interactive calculator. This tool provides a clear financial justification for investing in NoorNation's solutions.</p>
+                                <div class="roi-calculator">
+                                    <div class="roi-form">
+                                        <div class="form-group">
+                                            <label for="diesel-cost" data-translate="section4.value.label1">Current Monthly Diesel Cost (EGP)</label>
+                                            <input type="number" id="diesel-cost" placeholder="e.g., 30000">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="lifebox-cost" data-translate="section4.value.label2">Estimated LifeBox System Cost (EGP)</label>
+                                            <input type="number" id="lifebox-cost" placeholder="e.g., 750000">
+                                        </div>
+                                         <button onclick="calculateROI()" data-translate="section4.value.button">Calculate My Savings</button>
+                                    </div>
+                                    <div class="roi-results" id="roi-results">
+                                        <h4 data-translate="section4.value.resultsTitle">Your Financial Snapshot:</h4>
+                                        <p data-translate="section4.value.resultsPlaceholder">Enter your costs to see the results.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section5">
+             <div class="container">
+                <h2 data-translate="section5.title">Section 5: The Integrated Marketing Engine</h2>
+                <p data-translate="section5.subtitle" style="text-align: center; max-width: 800px; margin: -3rem auto 3rem auto;">This section details the high-performance digital mechanism that will drive awareness and lead generation, ensuring NoorNation reaches its target audience effectively and with impact.</p>
+                 <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header"><i class="fas fa-brain icon-header"></i> <span data-translate="section5.content.title">B2B Thought Leadership Content</span> <span class="icon fas fa-chevron-down"></span></div>
+                        <div class="accordion-content">
+                            <div class="content-inner"><p data-translate="section5.content.text">By consistently publishing high-value, educational content, NoorNation can own the narrative around solar water solutions and build trust before a sales conversation ever begins. Pillar content includes in-depth case studies, technical white papers, and quarterly webinars.</p></div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header"><i class="fas fa-recycle icon-header"></i> <span data-translate="section5.repurpose.title">Content Repurposing Hub</span> <span class="icon fas fa-chevron-down"></span></div>
+                        <div class="accordion-content">
+                            <div class="content-inner"><p data-translate="section5.repurpose.text">Maximum ROI from every content piece. A single webinar will be systematically "atomized" into blog posts, micro-videos for social media, LinkedIn articles, infographics, and email series, ensuring a consistent, multi-channel message with minimal extra effort.</p></div>
+                        </div>
+                    </div>
+                     <div class="accordion-item">
+                        <div class="accordion-header"><i class="fab fa-linkedin icon-header"></i> <span data-translate="section5.social.title">B2B Social Media Dominance (LinkedIn-First)</span> <span class="icon fas fa-chevron-down"></span></div>
+                        <div class="accordion-content">
+                            <div class="content-inner">
+                                <p data-translate="section5.social.text">In high-trust B2B sales, the personal brand of the founder/CEO is a tremendous asset. The primary LinkedIn focus will shift from the company page to Eng. Ragy Ramadan's profile, sharing authentic stories, industry insights, and behind-the-scenes content to build credibility.</p>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="accordion-item">
+                        <div class="accordion-header"><i class="fas fa-search-location icon-header"></i><span data-translate="section5.seo.title">Hyper-Localized SEO & Search Strategy</span><span class="icon fas fa-chevron-down"></span></div>
+                        <div class="accordion-content">
+                            <div class="content-inner">
+                                <p data-translate="section5.seo.text">By optimizing for specific keywords in both English and Arabic, we can intercept our audience at the precise moment of need. A dual-language, dual-country SEO strategy will be developed.</p>
+                                <div class="table-container">
+                                     <table>
+                                        <thead>
+                                            <tr>
+                                                <th data-translate="section5.seo.table.market">Market</th>
+                                                <th data-translate="section5.seo.table.stage">Funnel Stage</th>
+                                                <th data-translate="section5.seo.table.keywords">Long-Tail Keywords (Examples)</th>
+                                                <th data-translate="section5.seo.table.content">Corresponding Content Idea</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Egypt</td>
+                                                <td data-translate="section5.seo.stage.consideration">Consideration</td>
+                                                <td>cost of solar water pump for 5 acres in egypt / تكلفة مضخة مياه بالطاقة الشمسية لخمسة أفدنة</td>
+                                                <td data-translate="section5.seo.p1.content">Interactive ROI calculator, cost-saving case study.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Egypt</td>
+                                                <td data-translate="section5.seo.stage.awareness">Awareness</td>
+                                                <td>حلول الري بالطاقة الشمسية للمزارع النائية</td>
+                                                <td data-translate="section5.seo.p2.content">Blog Post: "How to Overcome Water & Energy Challenges in Reclaimed Lands."</td>
+                                            </tr>
+                                            <tr>
+                                                <td>UAE</td>
+                                                <td data-translate="section5.seo.stage.decision">Decision</td>
+                                                <td>agritech financing UAE / تمويل التكنولوجيا الزراعية في الإمارات</td>
+                                                <td data-translate="section5.seo.p3.content">Dedicated page on the "NoorNation Finance Advantage" and EDB partnership.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>UAE</td>
+                                                <td data-translate="section5.seo.stage.consideration">Consideration</td>
+                                                <td>solar powered water desalination for farms UAE cost</td>
+                                                <td data-translate="section5.seo.p4.content">White Paper: "A TCO Analysis of Solar Desalination vs. Traditional Solutions in the GCC."</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <section id="section6" style="background-color: var(--white);">
+             <div class="container">
+                <h2 data-translate="section6.title">Section 6: High-Touch Engagement & Field Strategy</h2>
+                 <p data-translate="section6.subtitle" style="text-align: center; max-width: 800px; margin: -3rem auto 3rem auto;">This section details the plan for building direct, personal relationships with customers and partners, ensuring field activities are purposeful and effective.</p>
+                 <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header"><i class="fas fa-calendar-check icon-header"></i> <span data-translate="section6.events.title">Strategic Exhibition & Workshop Blueprint</span> <span class="icon fas fa-chevron-down"></span></div>
+                        <div class="accordion-content">
+                            <div class="content-inner">
+                                <p data-translate="section6.events.text">Trade shows are high-impact opportunities. Their ROI will be maximized by integrating them with digital marketing before, during, and after the event.</p>
+                                 <div class="table-container">
+                                     <table>
+                                        <thead>
+                                            <tr>
+                                                <th data-translate="section6.events.table.name">Event Name</th>
+                                                <th data-translate="section6.events.table.date">Date</th>
+                                                <th data-translate="section6.events.table.loc">Location</th>
+                                                <th data-translate="section6.events.table.type">Participation</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Agri Expo</td>
+                                                <td>Jan 20-22, 2025</td>
+                                                <td>Cairo, Egypt</td>
+                                                <td data-translate="section6.events.type.exhibitor">Exhibitor</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Emirates Agriculture Conference</td>
+                                                <td>May 28-31, 2025</td>
+                                                <td>Al Ain, UAE</td>
+                                                <td data-translate="section6.events.type.visitor">Visitor/Sponsor</td>
+                                            </tr>
+                                             <tr>
+                                                <td>Sahara Expo</td>
+                                                <td>Sep 14-16, 2025</td>
+                                                <td>Cairo, Egypt</td>
+                                                <td data-translate="section6.events.type.exhibitor">Exhibitor</td>
+                                            </tr>
+                                             <tr>
+                                                <td>AGRENA</td>
+                                                <td>Oct 16-18, 2025</td>
+                                                <td>Cairo, Egypt</td>
+                                                <td data-translate="section6.events.type.exhibitor">Exhibitor</td>
+                                            </tr>
+                                             <tr>
+                                                <td>Food Africa</td>
+                                                <td>Dec 9-12, 2025</td>
+                                                <td>Cairo, Egypt</td>
+                                                <td data-translate="section6.events.type.exhibitor">Exhibitor</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="accordion-item">
+                        <div class="accordion-header"><i class="fas fa-users icon-header"></i> <span data-translate="section6.referral.title">The Revamped Advocate & Referral Program</span> <span class="icon fas fa-chevron-down"></span></div>
+                        <div class="accordion-content">
+                            <div class="content-inner" data-translate="section6.referral.detail">
+                            </div>
+                        </div>
+                    </div>
+                     <div class="accordion-item">
+                        <div class="accordion-header"><i class="fas fa-hands-helping icon-header"></i> <span data-translate="section6.direct.title">The Formalized Direct Engagement Plan</span> <span class="icon fas fa-chevron-down"></span></div>
+                        <div class="accordion-content">
+                            <div class="content-inner"><p data-translate="section6.direct.text">Client visits are critical for B2B sales in the MENA region. Our process will be formalized: identify high-potential leads, conduct a "Water & Energy Needs Assessment" to act as consultants, and follow up with a customized proposal including a detailed TCO/ROI analysis and financing options.</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section7" class="kpi-section" style="background-color: #002952;">
+            <div class="container">
+                <h2 data-translate="section7.title">Section 7: Performance & Optimization</h2>
+                <div id="kpiChartContainer">
+                    <canvas id="kpiChart"></canvas>
+                </div>
+                 <div class="accordion" style="margin-top: 3rem;">
+                    <div class="accordion-item">
+                        <div class="accordion-header" style="background: #003366; color: var(--white);"><i class="fas fa-tasks icon-header"></i> <span data-translate="section7.kpi_table.title">Comprehensive KPI Dashboard & Targets</span> <span class="icon fas fa-chevron-down"></span></div>
+                        <div class="accordion-content">
+                            <div class="content-inner">
+                                <p data-translate="section7.kpi_table.text">This framework integrates B2B marketing KPI best practices, assigning specific, measurable targets to each initiative. This ensures every marketing activity has a clear purpose and its effectiveness can be evaluated.</p>
+                                <div class="table-container">
+                                     <table>
+                                         <thead>
+                                             <tr>
+                                                 <th data-translate="section7.kpi_table.h1">Marketing Channel/Initiative</th>
+                                                 <th data-translate="section7.kpi_table.h2">Key Performance Indicator (KPI)</th>
+                                                 <th data-translate="section7.kpi_table.h3">Annual Target</th>
+                                             </tr>
+                                         </thead>
+                                         <tbody>
+                                             <tr>
+                                                 <td data-translate="section7.kpi_table.r1.c1">Content Marketing</td>
+                                                 <td data-translate="section7.kpi_table.r1.c2">White Paper/Case Study Downloads</td>
+                                                 <td>2,000</td>
+                                             </tr>
+                                             <tr>
+                                                 <td data-translate="section7.kpi_table.r2.c1">SEO</td>
+                                                 <td data-translate="section7.kpi_table.r2.c2">Organic Traffic Increase</td>
+                                                 <td>150%</td>
+                                             </tr>
+                                             <tr>
+                                                 <td data-translate="section7.kpi_table.r3.c1">LinkedIn (Organic & Paid)</td>
+                                                 <td data-translate="section7.kpi_table.r3.c2">Engagement Rate</td>
+                                                 <td>20%</td>
+                                             </tr>
+                                             <tr>
+                                                 <td data-translate="section7.kpi_table.r4.c1">Field Events</td>
+                                                 <td data-translate="section7.kpi_table.r4.c2">Leads per Event</td>
+                                                 <td>100+</td>
+                                             </tr>
+                                             <tr>
+                                                 <td data-translate="section7.kpi_table.r5.c1">Ambassador Program</td>
+                                                 <td data-translate="section7.kpi_table.r5.c2">Sales from Referrals</td>
+                                                 <td>5</td>
+                                             </tr>
+                                              <tr>
+                                                 <td data-translate="section7.kpi_table.r6.c1">Overall Sales</td>
+                                                 <td data-translate="section7.kpi_table.r6.c2">Customer Acquisition Cost (CAC)</td>
+                                                 <td>&lt; $5,000</td>
+                                             </tr>
+                                         </tbody>
+                                     </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="accordion-item">
+                        <div class="accordion-header" style="background: #003366; color: var(--white);"><i class="fas fa-sync-alt icon-header"></i> <span data-translate="section7.qbr.title">Quarterly Business Review (QBR) Cadence</span> <span class="icon fas fa-chevron-down"></span></div>
+                        <div class="accordion-content">
+                            <div class="content-inner">
+                                <p data-translate="section7.qbr.text">To ensure the plan remains a living document that adapts to market variables, a formal quarterly review process will be established. This QBR meeting is for leadership, marketing, and sales to review performance against the KPI dashboard, analyze successes and challenges, and make agile decisions to re-allocate budget and confirm priorities for the upcoming quarter. This process, derived from the core strategy, ensures continuous optimization and responsiveness.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const translations = {
+            en: {
+                header: { title: "NoorNation 2025", subtitle: "The Integrated Go-to-Market Strategy: A Roadmap for Regional Leadership and Sustainable Growth" },
+                nav: { section1: "Dashboard", section2: "Strategic Analysis", section3: "Objectives", section4: "Sales & Financing", section5: "Marketing Engine", section6: "Field Strategy", section7: "Performance & KPIs" },
+                section1: {
+                    title: "Section 1: Executive Dashboard",
+                    infographic: {
+                        card1: { title: "Empower 1M+ People", text: "Provide sustainable access to clean water and energy, driving community resilience and food security." },
+                        card2: { title: "Lead the MENA Region", text: "Become the go-to expert for integrated solar solutions, starting with strategic entry into Egypt and the UAE." },
+                        card3: { title: "Drive High-Value Growth", text: "Target 20 high-value sales contracts by leveraging our superior technology and financing models." }
+                    },
+                    visionMission: { title: "1.1. 2025 Vision & Mission", vision: { label: "Vision:", text: "To be the indisputable leader and go-to expert for integrated, solar-powered water and energy solutions in the MENA region, starting with Egypt and the UAE." }, mission: { label: "Mission:", text: "To empower one million beneficiaries by providing sustainable, reliable, and cost-effective access to clean water and energy, thereby driving agricultural productivity, food security, and community resilience." } },
+                    glance: { title: "1.2. Core Strategic Objectives (At a Glance)"},
+                    kpi: { impressions: "Brand Dominance", leads: "Lead & Sales Engine", sales: "UAE Market Penetration", engagement: "Community & Engagement", impressions_target: "Brand Impressions", leads_target: "Qualified Leads", sales_target: "Key UAE Contracts", engagement_target: "Engagement Rate" }
+                },
+                section2: {
+                    title: "Section 2: Strategic Analysis",
+                    swot: { 
+                        title: "2.1. Enhanced SWOT Analysis", 
+                        tabs: { strengths: "Strengths", weaknesses: "Weaknesses", opportunities: "Opportunities", threats: "Threats"},
+                        strengths_detail: `
+                            <h4 class="detail-heading">Award-Winning Credibility</h4>
+                            <p>The Access Sharjah Challenge 2024 win is not just an accolade; it is our primary tool for UAE market entry. It provides immediate third-party validation of our innovation and commitment to sustainability, a core value in the region. This award will be the centerpiece of our initial PR campaigns in the UAE.</p>
+                            <h4 class="detail-heading">Proven & Quantifiable Impact</h4>
+                            <p>Our track record in Egypt (22 LifeBox units deployed, 2,200 acres irrigated, 7 million liters of water desalinated, and $510,000 saved) is our most powerful marketing asset. This data provides the social proof necessary for B2B purchasing decisions.</p>
+                             <h4 class="detail-heading">Integrated Solution Superiority</h4>
+                            <p>LifeBox is a unique, all-in-one, "Plug & Play" solution for both energy and water. This critically differentiates us from competitors offering piecemeal products (solar panels or water pumps), which forces integration challenges onto the customer.</p>
+                        `,
+                        weaknesses_detail: `
+                            <h4 class="detail-heading">Ineffective Referral Program</h4>
+                            <p>The current model, noted as "(resell through third party)," is structurally flawed. It creates a middleman and fails to incentivize our most powerful advocates: satisfied customers. This will be completely overhauled.</p>
+                            <h4 class="detail-heading">Undeveloped Financing Offer</h4>
+                            <p>"Flexible financial models" are mentioned as a strength but lack substance. Without a clear, marketable financing program, the high upfront cost of LifeBox remains a major sales barrier.</p>
+                        `,
+                        opportunities_detail: `
+                            <h4 class="detail-heading">Alignment with National Strategies</h4>
+                            <p>The UAE's "National Food Security Strategy 2051" and "Energy Strategy 2050" are not just policies; they are market-creation engines. They prioritize AgriTech, sustainable local production, and reduced import dependency. LifeBox directly serves these national objectives, allowing us to position ourselves as a strategic partner to the UAE government, not just a vendor.</p>
+                            <h4 class="detail-heading">Exploiting Competitor Weaknesses</h4>
+                            <p>Many regional competitors exhibit a "limited or undetailed digital presence". A sophisticated, content-rich digital strategy will allow us to dominate the digital landscape, capturing mindshare and market share.</p>
+                             <h4 class="detail-heading">Untapped Market Segments</h4>
+                            <p>The MENA region is the most water-scarce in the world. Significant opportunities exist in markets like Saudi Arabia and other GCC countries where solar-powered desalination is a growing necessity.</p>
+                        `,
+                        threats_detail: `
+                            <h4 class="detail-heading">Inertia of Traditional Solutions</h4>
+                            <p>Diesel pumps are the incumbent solution. Our marketing must aggressively target their weaknesses: high and volatile fuel costs, high maintenance, and negative environmental impact.</p>
+                            <h4 class="detail-heading">Price-Based Competition</h4>
+                            <p>As the market grows, new competitors will enter, competing on price. Our strategy must proactively shift the conversation from price to Total Cost of Ownership (TCO) and Return on Investment (ROI), where LifeBox has a clear advantage.</p>
+                        `
+                    },
+                    personas: { title: "2.3. Target Audience Personas", subtitle: "Understanding our customers is key. Click on each card to reveal the motivations, pains, and gains of our core audience segments.", ahmed: { name: "'Ahmed'", desc: "The Small-Scale Egyptian Farmer", pain1: "Unreliable water supply", pain2: "Volatile fuel prices", pain3: "Low crop yields", gain1: "Water security", gain2: "Predictable costs", gain3: "Higher profitability" }, fatima: { name: "'Fatima'", desc: "The UAE Agri-Business Manager", pain1: "Meeting national food security targets", pain2: "Extreme water scarcity", pain3: "High energy costs", gain1: "Alignment with UAE Vision 2051", gain2: "Achieving sustainability KPIs", gain3: "Long-term production security" }, david: { name: "'David'", desc: "The NGO/Gov Project Manager", pain1: "Deploying solutions in remote areas", pain2: "Ensuring project sustainability", pain3: "Reporting quantifiable impact", gain1: "'Plug & Play' easy deployment", gain2: "Clear ESG impact metrics", gain3: "Alignment with SDGs" }, pains: "Pains", gains: "Gains" }
+                },
+                section3: {
+                    title: "Section 3: Core Strategic Pillars & Revised Objectives",
+                    smart: {
+                        title: "3.1. Revised SMART Objectives by Quarter (2025)",
+                        subtitle: "This plan translates analysis into a clear, time-bound action plan, ensuring every initiative contributes directly to the overarching goals.",
+                        table: { q: "Quarter", obj: "Strategic Objective", metric: "Key Metric", target: "Target", init: "Key Initiatives" },
+                        q1: { obj: "Foundation & Awareness", metric: "Brand Impressions", init: "Launch 'NoorNation Finance Advantage,' UAE PR campaign, initiate SEO audit." },
+                        q2: { obj: "Engagement & Nurturing", metric: "Marketing Qualified Leads (MQLs)", init: "Host first webinar, launch new referral program, visit early-year expos." },
+                        q3: { obj: "Growth & UAE Contracts", metric: "Sales Closed (Egypt + UAE)", init: "Exhibit at Sahara Expo, secure 1 B2B & 1 B2C contract in UAE." },
+                        q4: { obj: "Consolidation & Expansion", metric: "Total Annual Sales", init: "Exhibit at AGRENA, major referral program push, publish year-end report." }
+                    }
+                },
+                 section4: {
+                    title: "Section 4: The Game-Changer: A Value-Based Approach to Sales & Financing",
+                    finance: { 
+                        title: "The NoorNation Finance Advantage",
+                        text: "We are transforming financing from a mere option into a competitive advantage. We are not just selling a product; we are selling an affordable path to ownership and profitability.",
+                        table: { name: "Package Name", customer: "Target Customer", features: "Key Features", partner: "Proposed Partner"},
+                        p1: { name: "UAE AgriTech Partnership Loan", customer: "UAE Commercial Farms & Agribusinesses", features: "Up to 10-year tenor, 2.5-year grace period, up to 90% project financing.", partner: "Emirates Development Bank (EDB)"},
+                        p2: { name: "Egypt Lease-to-Own Program", customer: "Small to Medium Egyptian Farmers", features: "Converts large CAPEX into manageable monthly OPEX, with an option to own.", partner: "Direct by NoorNation or via local partners."},
+                        p3: { name: "NGO & B2G Project Finance", customer: "NGOs, Government Bodies, Development Projects", features: "Structured project financing, flexible terms to match donor funding cycles.", partner: "International Development Banks, Sustainability Funds."}
+                    },
+                    value: { 
+                        title: "Value-Based Selling & ROI Calculator", 
+                        text: "The customer isn't buying a solar pump; they are buying immunity from fuel price shocks, lower operational costs, and long-term profitability. Our sales team is trained to focus on ROI and Total Cost of Ownership (TCO).",
+                        subtitle2: "Interactive ROI Calculator", 
+                        text2: "Discover your potential savings with our interactive calculator. This tool provides a clear financial justification for investing in NoorNation's solutions.", 
+                        label1: "Current Monthly Diesel Cost (EGP)", 
+                        label2: "Estimated LifeBox System Cost (EGP)", 
+                        button: "Calculate My Savings", 
+                        resultsTitle: "Your Financial Snapshot:", 
+                        resultsPlaceholder: "Enter your costs to see the results."
+                    }
+                },
+                section5: {
+                    title: "Section 5: The Integrated Marketing Engine",
+                    subtitle: "This section details the high-performance digital mechanism that will drive awareness and lead generation, ensuring NoorNation reaches its target audience effectively and with impact.",
+                    content: { title: "B2B Thought Leadership Content", text: "By consistently publishing high-value, educational content, NoorNation can own the narrative around solar water solutions and build trust before a sales conversation ever begins. Pillar content includes in-depth case studies, technical white papers, and quarterly webinars." },
+                    repurpose: { title: "Content Repurposing Hub", text: "Maximum ROI from every content piece. A single webinar will be systematically 'atomized' into blog posts, micro-videos for social media, LinkedIn articles, infographics, and email series, ensuring a consistent, multi-channel message with minimal extra effort." },
+                    social: { title: "B2B Social Media Dominance (LinkedIn-First)", text: "In high-trust B2B sales, the personal brand of the founder/CEO is a tremendous asset. The primary LinkedIn focus will shift from the company page to Eng. Ragy Ramadan's profile, sharing authentic stories, industry insights, and behind-the-scenes content to build credibility." },
+                    seo: {
+                        title: "Hyper-Localized SEO & Search Strategy",
+                        text: "By optimizing for specific keywords in both English and Arabic, we can intercept our audience at the precise moment of need. A dual-language, dual-country SEO strategy will be developed.",
+                        table: { market: "Market", stage: "Funnel Stage", keywords: "Long-Tail Keywords (Examples)", content: "Corresponding Content Idea"},
+                        stage: { consideration: "Consideration", awareness: "Awareness", decision: "Decision" },
+                        p1: { content: "Interactive ROI calculator, cost-saving case study." },
+                        p2: { content: "Blog Post: 'How to Overcome Water & Energy Challenges in Reclaimed Lands.'" },
+                        p3: { content: "Dedicated page on the 'NoorNation Finance Advantage' and EDB partnership." },
+                        p4: { content: "White Paper: 'A TCO Analysis of Solar Desalination vs. Traditional Solutions in the GCC.'" }
+                    }
+                },
+                section6: {
+                    title: "Section 6: High-Touch Engagement & Field Strategy",
+                    subtitle: "This section details the plan for building direct, personal relationships with customers and partners, ensuring field activities are purposeful and effective.",
+                    events: {
+                        title: "Strategic Exhibition & Workshop Blueprint",
+                        text: "Trade shows are high-impact opportunities. Their ROI will be maximized by integrating them with digital marketing before, during, and after the event.",
+                        table: { name: "Event Name", date: "Date", loc: "Location", type: "Participation" },
+                        type: { exhibitor: "Exhibitor", visitor: "Visitor/Sponsor" }
+                    },
+                    referral: {
+                        title: "The Revamped Advocate & Referral Program",
+                        detail: `
+                            <p>The current "resell" based program is ineffective because it doesn’t leverage the most credible sales force: existing customers. A successful program for a high-value product must be mutually beneficial, rewarding the advocate for their trust and the new customer for their purchase. The "NoorNation Ambassadors Program" will be launched with the following structure:</p>
+                            <h4 class="detail-heading">Dual-Sided Incentive</h4>
+                            <ul>
+                                <li><strong>Ambassador (Referrer):</strong> Receives a significant reward for each successful sale (e.g., $500 cash bonus or a credit for one year of free maintenance).</li>
+                                <li><strong>New Customer (Referee):</strong> Receives an immediate benefit (e.g., a $500 discount on their LifeBox purchase). This creates a win-win scenario that encourages participation.</li>
+                            </ul>
+                            <h4 class="detail-heading">Simple Tracking & Management</h4>
+                            <p>Each ambassador will get a unique referral code and a personalized landing page link. We will use referral marketing software (e.g., Referral Factory, GrowSurf) integrated with our CRM to automate tracking and payouts, ensuring the program is easy to manage and transparent for participants.</p>
+                        `
+                    },
+                    direct: {
+                        title: "The Formalized Direct Engagement Plan",
+                        text: "Client visits are critical for B2B sales in the MENA region. Our process will be formalized: identify high-potential leads, conduct a 'Water & Energy Needs Assessment' to act as consultants, and follow up with a customized proposal including a detailed TCO/ROI analysis and financing options."
+                    }
+                },
+                section7: {
+                    title: "Section 7: Performance & Optimization",
+                    kpi_table: {
+                        title: "Comprehensive KPI Dashboard & Targets",
+                        text: "This framework integrates B2B marketing KPI best practices, assigning specific, measurable targets to each initiative. This ensures every marketing activity has a clear purpose and its effectiveness can be evaluated.",
+                        h1: "Marketing Channel/Initiative", h2: "Key Performance Indicator (KPI)", h3: "Annual Target",
+                        r1: { c1: "Content Marketing", c2: "White Paper/Case Study Downloads" },
+                        r2: { c1: "SEO", c2: "Organic Traffic Increase" },
+                        r3: { c1: "LinkedIn (Organic & Paid)", c2: "Engagement Rate" },
+                        r4: { c1: "Field Events", c2: "Leads per Event" },
+                        r5: { c1: "Ambassador Program", c2: "Sales from Referrals" },
+                        r6: { c1: "Overall Sales", c2: "Customer Acquisition Cost (CAC)" }
+                    },
+                    qbr: {
+                        title: "Quarterly Business Review (QBR) Cadence",
+                        text: "To ensure the plan remains a living document that adapts to market variables, a formal quarterly review process will be established. This QBR meeting is for leadership, marketing, and sales to review performance against the KPI dashboard, analyze successes and challenges, and make agile decisions to re-allocate budget and confirm priorities for the upcoming quarter. This process, derived from the core strategy, ensures continuous optimization and responsiveness."
+                    },
+                    chartTitle: 'Quarterly Progress Towards Key Goals'
+                }
+            },
+            ar: {
+                header: { title: "خطة نورنيشن 2025", subtitle: "الخطة الاستراتيجية المتكاملة للوصول إلى السوق: خارطة طريق للريادة الإقليمية والنمو المستدام" },
+                nav: { section1: "اللوحة الرئيسية", section2: "التحليل الاستراتيجي", section3: "الأهداف", section4: "المبيعات والتمويل", section5: "محرك التسويق", section6: "الاستراتيجية الميدانية", section7: "الأداء والمقاييس" },
+                section1: {
+                    title: "القسم 1: لوحة المعلومات التنفيذية",
+                     infographic: {
+                        card1: { title: "تمكين أكثر من مليون شخص", text: "توفير وصول مستدام للمياه النظيفة والطاقة، مما يعزز صمود المجتمعات والأمن الغذائي." },
+                        card2: { title: "قيادة منطقة الشرق الأوسط", text: "أن نصبح الخبير المرجعي للحلول الشمسية المتكاملة، بدءاً بالدخول الاستراتيجي إلى مصر والإمارات." },
+                        card3: { title: "تحقيق نمو عالي القيمة", text: "استهداف 20 عقد بيع عالي القيمة من خلال الاستفادة من تقنيتنا المتفوقة ونماذجنا التمويلية." }
+                    },
+                    visionMission: { title: "1.1. رؤية ورسالة 2025", vision: { label: "الرؤية:", text: "أن نكون الشركة الرائدة والخبير المرجعي في حلول المياه والطاقة المتكاملة التي تعمل بالطاقة الشمسية في منطقة الشرق الأوسط وشمال أفريقيا، بدءًا من مصر والإمارات." }, mission: { label: "الرسالة:", text: "تمكين مليون مستفيد من خلال توفير وصول مستدام وموثوق وفعال من حيث التكلفة للمياه النظيفة والطاقة، مما يدفع الإنتاجية الزراعية والأمن الغذائي ومرونة المجتمعات." } },
+                    glance: { title: "1.2. الأهداف الاستراتيجية الأساسية (نظرة سريعة)"},
+                    kpi: { impressions: "الهيمنة على العلامة التجارية", leads: "محرك العملاء والمبيعات", sales: "اختراق السوق الإماراتي", engagement: "المجتمع والتفاعل", impressions_target: "انطباع للعلامة التجارية", leads_target: "عميل محتمل مؤهل", sales_target: "عقود رئيسية في الإمارات", engagement_target: "معدل التفاعل" }
+                },
+                section2: {
+                    title: "القسم 2: التحليل الاستراتيجي",
+                    swot: { 
+                        title: "2.1. تحليل SWOT المعزز",
+                        tabs: { strengths: "نقاط القوة", weaknesses: "نقاط الضعف", opportunities: "الفرص", threats: "التهديدات" },
+                        strengths_detail: `
+                            <h4 class="detail-heading">مصداقية معززة بالجوائز</h4>
+                            <p>الفوز في تحدي وصول الشارقة 2024 ليس مجرد إنجاز؛ بل هو أداتنا الأساسية لدخول سوق الإمارات العربية المتحدة. فهو يوفر مصادقة فورية من طرف ثالث على ابتكارنا والتزامنا بالاستدامة، وهي قيمة أساسية في المنطقة. ستكون هذه الجائزة محور حملاتنا الإعلامية الأولية في الإمارات.</p>
+                            <h4 class="detail-heading">تأثير مثبت وقابل للقياس</h4>
+                            <p>سجلنا الحافل في مصر (نشر 22 وحدة LifeBox، ري 2200 فدان، تحلية 7 ملايين لتر من المياه، وتوفير 510,000 دولار) هو أقوى أصولنا التسويقية. توفر هذه البيانات الدليل الاجتماعي اللازم لقرارات الشراء في قطاع الأعمال.</p>
+                             <h4 class="detail-heading">تفوق الحل المتكامل</h4>
+                            <p>يعتبر LifeBox حلاً فريدًا ومتكاملًا "جاهزًا للتشغيل" لكل من الطاقة والمياه. وهذا يميزنا بشكل حاسم عن المنافسين الذين يقدمون منتجات مجزأة (ألواح شمسية أو مضخات مياه)، مما يفرض تحديات التكامل على العميل.</p>
+                        `,
+                        weaknesses_detail: `
+                            <h4 class="detail-heading">برنامج إحالة غير فعال</h4>
+                            <p>النموذج الحالي، المشار إليه بـ "(إعادة البيع عبر طرف ثالث)"، معيب هيكليًا. فهو يخلق وسيطًا ويفشل في تحفيز أقوى دعاتنا: العملاء الراضون. سيتم إصلاح هذا بالكامل.</p>
+                            <h4 class="detail-heading">عرض تمويل غير متطور</h4>
+                            <p>ذُكرت "النماذج المالية المرنة" كنقطة قوة لكنها تفتقر إلى الجوهر. بدون برنامج تمويل واضح وقابل للتسويق، تظل التكلفة الأولية المرتفعة لـ LifeBox حاجزًا رئيسيًا أمام المبيعات.</p>
+                        `,
+                        opportunities_detail: `
+                            <h4 class="detail-heading">التوافق مع الاستراتيجيات الوطنية</h4>
+                            <p>"استراتيجية الأمن الغذائي الوطنية 2051" و "استراتيجية الطاقة 2050" في الإمارات ليستا مجرد سياسات؛ بل هما محركات لخلق الأسواق. إنهما تعطيان الأولوية للتكنولوجيا الزراعية والإنتاج المحلي المستدام وتقليل الاعتماد على الاستيراد. يخدم LifeBox هذه الأهداف الوطنية مباشرة، مما يسمح لنا بوضع أنفسنا كشريك استراتيجي لحكومة الإمارات، وليس مجرد مورد.</p>
+                            <h4 class="detail-heading">استغلال نقاط ضعف المنافسين</h4>
+                            <p>يُظهر العديد من المنافسين الإقليميين "وجودًا رقميًا محدودًا أو غير مفصل". ستسمح لنا استراتيجية رقمية متطورة وغنية بالمحتوى بالهيمنة على المشهد الرقمي، والاستحواذ على الوعي وحصة السوق.</p>
+                             <h4 class="detail-heading">قطاعات سوقية غير مستغلة</h4>
+                            <p>منطقة الشرق الأوسط وشمال أفريقيا هي الأكثر ندرة في المياه في العالم. توجد فرص كبيرة في أسواق مثل المملكة العربية السعودية ودول مجلس التعاون الخليجي الأخرى حيث أصبحت تحلية المياه بالطاقة الشمسية ضرورة متزايدة.</p>
+                        `,
+                        threats_detail: `
+                            <h4 class="detail-heading">جمود الحلول التقليدية</h4>
+                            <p>مضخات الديزل هي الحل السائد. يجب أن يستهدف تسويقنا بقوة نقاط ضعفها: تكاليف الوقود المرتفعة والمتقلبة، والصيانة العالية، والتأثير البيئي السلبي.</p>
+                            <h4 class="detail-heading">المنافسة القائمة على السعر</h4>
+                            <p>مع نمو السوق، سيدخل منافسون جدد يتنافسون على السعر. يجب أن تحول استراتيجيتنا بشكل استباقي الحديث من السعر إلى التكلفة الإجمالية للملكية (TCO) والعائد على الاستثمار (ROI)، حيث يتمتع LifeBox بميزة واضحة.</p>
+                        `
+                    },
+                    personas: { title: "2.3. شخصيات الجمهور المستهدف", subtitle: "فهم عملائنا هو مفتاح النجاح. انقر على كل بطاقة للكشف عن دوافع وآلام ومكاسب شرائح جمهورنا الأساسية.", ahmed: { name: "'أحمد'", desc: "المزارع المصري الصغير", pain1: "إمدادات مياه غير موثوقة", pain2: "أسعار وقود متقلبة", pain3: "غلة محاصيل منخفضة", gain1: "أمن مائي", gain2: "تكاليف يمكن التنبؤ بها", gain3: "ربحية أعلى" }, fatima: { name: "'فاطمة'", desc: "مديرة الأعمال الزراعية في الإمارات", pain1: "تحقيق أهداف الأمن الغذائي الوطنية", pain2: "ندرة هائلة في المياه", pain3: "تكاليف طاقة عالية", gain1: "التوافق مع رؤية الإمارات 2051", gain2: "تحقيق مؤشرات أداء الاستدامة", gain3: "أمن الإنتاج طويل الأجل" }, david: { name: "'ديفيد'", desc: "مدير مشروع في منظمة غير حكومية/حكومية", pain1: "نشر الحلول في مناطق نائية", pain2: "ضمان استدامة المشاريع", pain3: "تقديم تقارير عن التأثير القابل للقياس", gain1: "نشر سهل وجاهز للتشغيل", gain2: "مقاييس تأثير واضحة (ESG)", gain3: "التوافق مع أهداف التنمية المستدامة" }, pains: "التحديات", gains: "المكاسب" }
+                },
+                section3: {
+                    title: "القسم 3: الركائز الاستراتيجية والأهداف المعدلة",
+                    smart: {
+                        title: "3.1. أهداف SMART المعدلة حسب الربع (2025)",
+                        subtitle: "تترجم هذه الخطة التحليل إلى خطة عمل واضحة ومحددة زمنيًا، مما يضمن مساهمة كل مبادرة بشكل مباشر في الأهداف الشاملة.",
+                        table: { q: "الربع", obj: "الهدف الاستراتيجي", metric: "المقياس الرئيسي", target: "الهدف", init: "المبادرات الرئيسية" },
+                        q1: { obj: "التأسيس والوعي", metric: "انطباعات العلامة التجارية", init: "إطلاق 'ميزة تمويل نورنيشن'، حملة علاقات عامة في الإمارات، بدء تدقيق SEO." },
+                        q2: { obj: "التفاعل ورعاية العملاء", metric: "العملاء المحتملون المؤهلون تسويقياً (MQLs)", init: "استضافة أول ندوة عبر الإنترنت، إطلاق برنامج الإحالة الجديد، زيارة المعارض المبكرة." },
+                        q3: { obj: "النمو والعقود في الإمارات", metric: "المبيعات المغلقة (مصر + الإمارات)", init: "المشاركة في معرض صحارى، تأمين عقد B2B وعقد B2C في الإمارات." },
+                        q4: { obj: "التعزيز والتوسع", metric: "إجمالي المبيعات السنوية", init: "المشاركة في معرض AGRENA، حملة ترويجية كبرى لبرنامج الإحالة، نشر تقرير نهاية العام." }
+                    }
+                },
+                section4: {
+                    title: "القسم 4: الميزة التنافسية الحاسمة: المبيعات والتمويل",
+                     finance: { 
+                        title: "ميزة تمويل نورنيشن",
+                        text: "نحن نحوّل التمويل من مجرد خيار إلى ميزة تنافسية. نحن لا نبيع منتجًا فحسب؛ بل نبيع مسارًا ميسور التكلفة للملكية والربحية.",
+                        table: { name: "اسم الباقة", customer: "العميل المستهدف", features: "الميزات الرئيسية", partner: "الشريك المقترح"},
+                        p1: { name: "قرض شراكة التكنولوجيا الزراعية في الإمارات", customer: "المزارع التجارية والشركات الزراعية في الإمارات", features: "مدة تصل إلى 10 سنوات، فترة سماح 2.5 سنة، تمويل يصل إلى 90٪ من المشروع.", partner: "بنك الإمارات للتنمية (EDB)"},
+                        p2: { name: "برنامج التأجير التمويلي في مصر", customer: "المزارعون المصريون الصغار والمتوسطون", features: "يحول النفقات الرأسمالية الكبيرة إلى نفقات تشغيلية شهرية يمكن التحكم فيها، مع خيار التملك.", partner: "مباشرة من نورنيشن أو عبر شركاء محليين."},
+                        p3: { name: "تمويل مشاريع المنظمات غير الحكومية والحكومية", customer: "المنظمات غير الحكومية، الهيئات الحكومية، المشاريع التنموية", features: "تمويل مشاريع منظم، شروط مرنة مصممة لتتناسب مع دورات تمويل المانحين.", partner: "بنوك التنمية الدولية، صناديق الاستدامة."}
+                    },
+                    value: { 
+                        title: "البيع القائم على القيمة وحاسبة العائد على الاستثمار", 
+                        text: "العميل لا يشتري مضخة شمسية؛ بل يشتري حصانة من صدمات أسعار الوقود، وتكاليف تشغيل أقل، وربحية طويلة الأجل. فريق مبيعاتنا مدرب على التركيز على العائد على الاستثمار والتكلفة الإجمالية للملكية (TCO).",
+                        subtitle2: "حاسبة تفاعلية للعائد على الاستثمار", 
+                        text2: "اكتشف مدخراتك المحتملة مع حاسبتنا التفاعلية. توفر هذه الأداة تبريرًا ماليًا واضحًا للاستثمار في حلول نورنيشن.", 
+                        label1: "تكلفة الديزل الشهرية الحالية (بالجنيه المصري)", 
+                        label2: "التكلفة التقديرية لنظام LifeBox (بالجنيه المصري)", 
+                        button: "احسب مدخراتي", 
+                        resultsTitle: "لمحتك المالية:", 
+                        resultsPlaceholder: "أدخل تكاليفك لرؤية النتائج.",
+                        results1: "مدخرات الديزل السنوية:", 
+                        results2: "فترة استرداد رأس المال:", 
+                        results3: "صافي المدخرات في 5 سنوات:", 
+                        years: "سنوات"
+                    }
+                },
+                section5: {
+                    title: "القسم 5: محرك التسويق المتكامل",
+                    subtitle: "يفصل هذا القسم الآلية الرقمية عالية الأداء التي ستقود الوعي وتوليد العملاء المحتملين، مما يضمن وصول نورنيشن إلى جمهورها المستهدف بفعالية وتأثير.",
+                    content: { title: "محتوى قيادة الفكر لقطاع B2B", text: "من خلال نشر محتوى تعليمي عالي القيمة باستمرار، يمكن لنورنيشن أن تسيطر على السرد حول حلول المياه بالطاقة الشمسية وبناء الثقة حتى قبل بدء محادثة المبيعات. يشمل المحتوى الأساسي دراسات حالة متعمقة، وأوراق بيضاء تقنية، وندوات ربع سنوية." },
+                    repurpose: { title: "مركز إعادة توظيف المحتوى", text: "أقصى عائد على الاستثمار من كل قطعة محتوى. سيتم 'تجزئة' ندوة واحدة بشكل منهجي إلى منشورات مدونة، ومقاطع فيديو صغيرة لوسائل التواصل الاجتماعي، ومقالات على لينكدإن، ورسوم بيانية، وسلسلة رسائل بريد إلكتروني، مما يضمن رسالة متسقة ومتعددة القنوات بأقل جهد إضافي." },
+                    social: { title: "الهيمنة على وسائل التواصل الاجتماعي لقطاع B2B (لينكدإن أولاً)", text: "في مبيعات B2B التي تتطلب ثقة عالية، تعد العلامة التجارية الشخصية للمؤسس/الرئيس التنفيذي أحد الأصول الهائلة. سينتقل تركيز لينكدإن الأساسي من صفحة الشركة إلى ملف المهندس راجي رمضان، لمشاركة قصص حقيقية ورؤى صناعية ومحتوى من وراء الكواليس لبناء المصداقية." },
+                    seo: {
+                        title: "استراتيجية البحث وتحسين محركات البحث المحلية",
+                        text: "من خلال التحسين لكلمات رئيسية محددة باللغتين الإنجليزية والعربية، يمكننا اعتراض جمهورنا في اللحظة المحددة التي يحتاجون فيها إلينا. سيتم تطوير استراتيجية SEO ثنائية اللغة والبلد.",
+                        table: { market: "السوق", stage: "مرحلة القمع", keywords: "كلمات رئيسية طويلة (أمثلة)", content: "فكرة المحتوى المقابلة"},
+                        stage: { consideration: "الاعتبار", awareness: "الوعي", decision: "القرار" },
+                        p1: { content: "حاسبة تفاعلية للعائد على الاستثمار، دراسة حالة لتوفير التكاليف." },
+                        p2: { content: "مقالة مدونة: 'كيفية التغلب على تحديات المياه والطاقة في الأراضي المستصلحة'." },
+                        p3: { content: "صفحة مخصصة حول 'ميزة تمويل نورنيشن' وشراكة بنك الإمارات للتنمية." },
+                        p4: { content: "ورقة بيضاء: 'تحليل التكلفة الإجمالية للملكية لتحلية المياه بالطاقة الشمسية مقابل الحلول التقليدية في دول مجلس التعاون الخليجي'." }
+                    }
+                },
+                 section6: {
+                    title: "القسم 6: المشاركة عالية المستوى والاستراتيجية الميدانية",
+                    subtitle: "يفصل هذا القسم خطة بناء علاقات شخصية ومباشرة مع العملاء والشركاء، مما يضمن أن تكون الأنشطة الميدانية هادفة وفعالة.",
+                    events: {
+                        title: "مخطط المعارض وورش العمل الاستراتيجية",
+                        text: "تعد المعارض التجارية فرصًا عالية التأثير. سيتم تعظيم عائدها على الاستثمار من خلال دمجها مع التسويق الرقمي قبل وأثناء وبعد الحدث.",
+                        table: { name: "اسم الحدث", date: "التاريخ", loc: "الموقع", type: "المشاركة" },
+                        type: { exhibitor: "عارض", visitor: "زائر/راعي" }
+                    },
+                    referral: {
+                        title: "برنامج السفراء والإحالة المجدد",
+                        detail: `
+                            <p>النموذج الحالي القائم على "إعادة البيع" غير فعال لأنه لا يستفيد من قوة البيع الأكثر مصداقية: العملاء الحاليون. يجب أن يكون البرنامج الناجح لمنتج عالي القيمة مفيدًا للطرفين، حيث يكافئ الداعم على ثقته والعميل الجديد على شرائه. سيتم إطلاق "برنامج سفراء نورنيشن" بالهيكل التالي:</p>
+                            <h4 class="detail-heading">حافز مزدوج الجانب</h4>
+                            <ul>
+                                <li><strong>السفير (المُحيل):</strong> يحصل على مكافأة مجزية عن كل عملية بيع ناجحة (على سبيل المثال، مكافأة نقدية بقيمة 500 دولار أو رصيد لصيانة مجانية لمدة عام واحد).</li>
+                                <li><strong>العميل الجديد (المُحال):</strong> يحصل على فائدة فورية (على سبيل المثال، خصم 500 دولار على شراء LifeBox). هذا يخلق سيناريو مربح للجانبين يشجع على المشاركة.</li>
+                            </ul>
+                            <h4 class="detail-heading">تتبع وإدارة بسيطة</h4>
+                            <p>سيحصل كل سفير على رمز إحالة فريد ورابط صفحة هبوط مخصص. سنستخدم برنامج تسويق بالإحالة (مثل Referral Factory أو GrowSurf) مدمج مع نظام إدارة علاقات العملاء (CRM) الخاص بنا لأتمتة التتبع والمدفوعات، مما يضمن سهولة إدارة البرنامج وشفافيته للمشاركين.</p>
+                        `
+                    },
+                    direct: {
+                        title: "خطة المشاركة المباشرة الرسمية",
+                        text: "تعد زيارات العملاء حاسمة لمبيعات B2B في منطقة الشرق الأوسط وشمال إفريقيا. سيتم إضفاء الطابع الرسمي على عمليتنا: تحديد العملاء المحتملين ذوي الإمكانات العالية، وإجراء 'تقييم لاحتياجات المياه والطاقة' للعمل كمستشارين، والمتابعة بمقترح مخصص يتضمن تحليلًا مفصلاً للتكلفة الإجمالية للملكية/العائد على الاستثمار وخيارات التمويل."
+                    }
+                },
+                section7: {
+                    title: "القسم 7: الأداء والتحسين",
+                    kpi_table: {
+                        title: "لوحة مؤشرات الأداء الرئيسية الشاملة والأهداف",
+                        text: "يدمج هذا الإطار أفضل ممارسات مؤشرات الأداء الرئيسية للتسويق B2B، مع تحديد أهداف محددة وقابلة للقياس لكل مبادرة. هذا يضمن أن كل نشاط تسويقي له غرض واضح ويمكن تقييم فعاليته.",
+                        h1: "قناة/مبادرة التسويق", h2: "مؤشر الأداء الرئيسي (KPI)", h3: "الهدف السنوي",
+                        r1: { c1: "تسويق المحتوى", c2: "تنزيلات الأوراق البيضاء/دراسات الحالة" },
+                        r2: { c1: "تحسين محركات البحث (SEO)", c2: "زيادة حركة المرور العضوية" },
+                        r3: { c1: "لينكدإن (مجاني ومدفوع)", c2: "معدل التفاعل" },
+                        r4: { c1: "الفعاليات الميدانية", c2: "العملاء المحتملون لكل فعالية" },
+                        r5: { c1: "برنامج السفراء", c2: "المبيعات من الإحالات" },
+                        r6: { c1: "إجمالي المبيعات", c2: "تكلفة اكتساب العميل (CAC)" }
+                    },
+                    qbr: {
+                        title: "إيقاع المراجعة ربع السنوية للأعمال (QBR)",
+                        text: "لضمان بقاء الخطة وثيقة حية تتكيف مع متغيرات السوق، سيتم إنشاء عملية مراجعة ربع سنوية رسمية. اجتماع المراجعة هذا مخصص للقيادة والتسويق والمبيعات لمراجعة الأداء مقابل لوحة مؤشرات الأداء الرئيسية، وتحليل النجاحات والتحديات، واتخاذ قرارات مرنة لإعادة تخصيص الميزانية وتأكيد أولويات الربع القادم. تضمن هذه العملية، المستمدة من الاستراتيجية الأساسية، التحسين المستمر والاستجابة."
+                    },
+                    chartTitle: 'التقدم المحرز نحو الأهداف ربع السنوية'
+                }
+            }
+        };
+
+        function switchLanguage(lang) {
+            document.documentElement.lang = lang;
+            document.body.className = lang === 'ar' ? 'rtl' : 'ltr';
+            
+            document.querySelectorAll('[data-translate]').forEach(el => {
+                const key = el.getAttribute('data-translate');
+                const translation = key.split('.').reduce((obj, i) => obj && obj[i] ? obj[i] : null, translations[lang]);
+                if (translation && typeof translation === 'string') {
+                    el.innerHTML = translation;
+                }
+            });
+
+            if (kpiChart && kpiChart.options.plugins.title) {
+                kpiChart.options.plugins.title.text = translations[lang].section7.chartTitle;
+                kpiChart.update();
+            }
+            
+            document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+            document.getElementById('lang-ar').classList.toggle('active', lang === 'ar');
+            
+            localStorage.setItem('preferredLanguage', lang);
+        }
+
+        document.getElementById('lang-en').addEventListener('click', () => switchLanguage('en'));
+        document.getElementById('lang-ar').addEventListener('click', () => switchLanguage('ar'));
+        
+        let kpiChart;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const preferredLanguage = localStorage.getItem('preferredLanguage') || 'en';
+            switchLanguage(preferredLanguage);
+            
+            const kpiCtx = document.getElementById('kpiChart')?.getContext('2d');
+            
+            const kpiData = {
+                 labels: ['Q1', 'Q2', 'Q3', 'Q4'],
+                 datasets: [
+                     { label: 'Brand Impressions (in Millions)', data: [0.75, 1.5, 2.5, 3.25], borderColor: 'rgba(0, 168, 107, 1)', backgroundColor: 'rgba(0, 168, 107, 0.2)', yAxisID: 'y', fill: true, tension: 0.4, type: 'line' }, 
+                     { label: 'Qualified Leads (Cumulative)', data: [200, 700, 1800, 3000], borderColor: 'rgba(255, 165, 0, 1)', backgroundColor: 'rgba(255, 165, 0, 0.7)', yAxisID: 'y1', type: 'bar' },
+                     { label: 'Sales Closed (Cumulative)', data: [2, 5, 12, 20], borderColor: 'rgba(255, 255, 255, 0.8)', backgroundColor: 'rgba(255, 255, 255, 0.5)', yAxisID: 'y2', type: 'line', pointRadius: 5, pointBackgroundColor: '#fff' }
+                 ]
+            };
+
+            if (kpiCtx) {
+                kpiChart = new Chart(kpiCtx, {
+                    type: 'bar',
+                    data: kpiData,
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: true,
+                        scales: { 
+                            x: { grid: { color: 'rgba(255, 255, 255, 0.2)' }, ticks: { color: 'white' } },
+                            y: { type: 'linear', display: true, position: 'left', title: { display: true, text: 'Impressions (Millions)', color: 'white' }, grid: { color: 'rgba(255, 255, 255, 0.2)' }, ticks: { color: 'white' } },
+                            y1: { type: 'linear', display: true, position: 'right', title: { display: true, text: 'Leads', color: 'white' }, grid: { drawOnChartArea: false }, ticks: { color: 'white' } },
+                            y2: { type: 'linear', display: true, position: 'right', title: { display: true, text: 'Sales', color: 'white'}, grid: { drawOnChartArea: false }, ticks: { color: 'white' }, offset: true }
+                        },
+                        plugins: { 
+                            legend: { position: 'top', labels: { color: 'white' } }, 
+                            title: { display: true, text: translations[preferredLanguage].section7.chartTitle, color: 'white', font: { size: 18 } } 
+                        },
+                        interaction: {
+                            intersect: false,
+                            mode: 'index',
+                        },
+                    }
+                });
+            }
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        if (entry.target.classList.contains('kpi-value')) {
+                            const target = +entry.target.getAttribute('data-target');
+                            animateValue(entry.target, 0, target, 2000);
+                            observer.unobserve(entry.target);
+                        }
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            function animateValue(obj, start, end, duration) {
+                let startTimestamp = null;
+                const step = (timestamp) => {
+                    if (!startTimestamp) startTimestamp = timestamp;
+                    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                    obj.innerHTML = Math.floor(progress * (end - start) + start).toLocaleString(document.documentElement.lang);
+                    if (progress < 1) window.requestAnimationFrame(step);
+                };
+                window.requestAnimationFrame(step);
+            }
+            document.querySelectorAll('.kpi-value, .info-card, .accordion-item').forEach(el => observer.observe(el));
+            
+            const accordionItems = document.querySelectorAll('.accordion-item');
+            accordionItems.forEach(item => {
+                const header = item.querySelector('.accordion-header');
+                header.addEventListener('click', () => {
+                    const content = item.querySelector('.accordion-content');
+                    const wasActive = item.classList.contains('active');
+                    
+                    if (!wasActive) {
+                       item.classList.add('active');
+                       content.style.maxHeight = content.scrollHeight + 'px';
+                    } else {
+                        item.classList.remove('active');
+                        content.style.maxHeight = '0';
+                    }
+                });
+            });
+
+        });
+
+        function calculateROI() {
+            const dieselCost = parseFloat(document.getElementById('diesel-cost').value);
+            const lifeboxCost = parseFloat(document.getElementById('lifebox-cost').value);
+            const resultsDiv = document.getElementById('roi-results');
+            const lang = document.documentElement.lang;
+            const labels = translations[lang].section4.value;
+
+            if (isNaN(dieselCost) || isNaN(lifeboxCost) || dieselCost <= 0 || lifeboxCost <= 0) {
+                resultsDiv.innerHTML = `<h4>${labels.resultsTitle}</h4><p style="color:red;">Please enter valid costs.</p>`;
+                return;
+            }
+
+            const annualDieselSavings = dieselCost * 12;
+            const paybackMonths = lifeboxCost / dieselCost;
+            const paybackYears = paybackMonths / 12;
+            const savings5Year = (annualDieselSavings * 5) - lifeboxCost;
+
+            resultsDiv.innerHTML = `
+                <h4>${labels.resultsTitle}</h4>
+                <p>${lang === 'ar' ? 'مدخرات الديزل السنوية:' : 'Annual Diesel Savings:'} <span class="highlight">${annualDieselSavings.toLocaleString(lang)} EGP</span></p>
+                <p>${lang === 'ar' ? 'فترة استرداد رأس المال:' : 'Payback Period:'} <span class="highlight">${paybackYears.toFixed(1)} ${lang === 'ar' ? 'سنوات' : 'years'}</span></p>
+                <p>${lang === 'ar' ? 'صافي المدخرات في 5 سنوات:' : 'Net 5-Year Savings:'} <span class="highlight">${savings5Year.toLocaleString(lang)} EGP</span></p>
+            `;
+        }
+
+        function openSwotTab(evt, tabName) {
+            let i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+</html>
